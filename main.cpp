@@ -1,6 +1,7 @@
 #include <iostream>
 #include "lista_estatica.h"
 #include "libro.h"
+#include "pila_estatica.h"
 
 using namespace std;
 
@@ -22,6 +23,24 @@ int main() {
     libreria.agregar_final(Libro("POO", "Deitel", 500));
     libreria.agregar_final(Libro("Python", "Joyanes", 800));
     libreria.mostrar();
+
+    PilaEstatica<string, 10> pila;
+    try {
+        cout << pila.tope();
+    } catch (...) {
+        cout << "Error al acceder al tope" << endl;
+    }
+
+    pila.apilar("1");
+    pila.apilar("2");
+    pila.apilar("3");
+    pila.apilar("4");
+    pila.apilar("5");
+
+    while (!pila.vacia()){
+        cout << pila.tope() << endl;
+        pila.desapilar();
+    }
 
 
     return 0;
