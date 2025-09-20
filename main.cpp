@@ -2,10 +2,13 @@
 #include "lista_estatica.h"
 #include "libro.h"
 #include "pila_estatica.h"
+#include "cola_estatica.h"
 
 using namespace std;
 
 int main() {
+
+    /*
     ListaEstatica<string, 10> lista;
     lista.agregar_final("CUCEI");
     lista.agregar_final("CUCEA");
@@ -40,7 +43,19 @@ int main() {
     while (!pila.vacia()){
         cout << pila.tope() << endl;
         pila.desapilar();
+    } */
+
+    ColaEstatica<string, 10> clientes;
+    clientes.encolar("Michel");
+    clientes.encolar("Juan");
+    clientes.encolar("Ana");
+    clientes.encolar("Danna");
+
+    while(!clientes.vacia()) {
+        cout << clientes.inicio() << endl;
+        clientes.desencolar();
     }
+
 
 
     return 0;

@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Clase_20_SEP main.cpp
         lista_estatica.h
-        pila_estatica.h)
+        pila_estatica.h
+        cola_estatica.h)

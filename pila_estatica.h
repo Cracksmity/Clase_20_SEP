@@ -11,6 +11,7 @@
 #include <string>
 using namespace std;
 
+// Stack
 template<typename T, size_t MAX_SIZE>
 class PilaEstatica {
 private:
