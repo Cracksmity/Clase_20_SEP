@@ -8,10 +8,12 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Libro {
 private:
-    std::string titulo;
-    std::string autor;
+    string titulo;
+    string autor;
     int numeroPaginas;
 
 public:
@@ -19,15 +21,15 @@ public:
     Libro() : titulo(), autor(), numeroPaginas(0) {}
 
     // Constructor con parámetros
-    Libro(const std::string& titulo, const std::string& autor, int numeroPaginas)
+    Libro(const string& titulo, const string& autor, int numeroPaginas)
             : titulo(titulo), autor(autor), numeroPaginas(numeroPaginas) {}
 
     // Operador de salida
-    friend std::ostream& operator<<(std::ostream& out, const Libro& libro) {
+    friend ostream& operator<<(ostream& out, const Libro& libro) {
         out << "Libro(titulo=" << libro.titulo << ", "
             << "autor=" << libro.autor << ", "
             << "numero de paginas=" << libro.numeroPaginas
-            << ")";
+            << ")\n";
         return out;
     }
 };
